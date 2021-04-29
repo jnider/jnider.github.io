@@ -1,0 +1,76 @@
+<!doctype html public '-//W3C//DTD HTML 4.01//EN'>
+<html>
+<head>
+  <title>Joel Nider @ UBC - posters</title>
+  <link rel="stylesheet" href="style.css" media="screen, print, projection, tv">
+</head>
+
+<body>
+<div id="wrapper">
+<h1 class="section">Posters</h1>
+<ul id="nav">
+<li class="inactive"><a href=index.html>Main</a></li>
+<li><a href="posters.html">Posters</a></li>
+<li class="inactive"><a href="papers.html">Papers</a></li>
+<!-- <li class="inactive"><a href="patents.html">Patents</a></li> -->
+<li class="inactive"><a href="patches.html">Patches</a></li>
+<li class="inactive"><a href="presentations.html">Presentations</a></li>
+</ul>
+
+
+<div id="content">
+<!-- NEW POSTER ENTRY
+<h2 class="node-title">Conference Year<a href="link">Title</a></h2>
+<p class="author">Authors <b>Joel Nider</b>, <em>Affiliation</em></p>
+<p class="abstract">
+</p>
+<a href="posters/.png"><img src="posters/-thumb.png" /></a>
+-->
+<h2 class="node-title">Systor 2019 - <a href="https://dl.acm.org/doi/abs/10.1145/3319647.3325855">Address space isolation in the linux kernel</a></h2>
+<p class="author"><b>Joel Nider</b>, Mike Rapoport, James Bottomley <em>IBM Research</em></p>
+<p class="abstract">
+Monolithic kernel design mandates the use of a single address space for kernel data and code. While this design is easy to understand and performs well, it does not provide much in the way of protection from exploitable bugs in the interface. By dividing up kernel objects into areas of responsibility, we can introduce additional address spaces which will prevent information leakage, even in the case of a successful attack on the kernel. We are exploring several possible implementations with the goal of increasing security while minimizing the impact on performance.
+</p>
+<a href="posters/.png"><img src="posters/-thumb.png" /></a>
+
+<h2 class="node-title">Systor 2019 - <a href="https://dl.acm.org/doi/10.1145/3319647.3325856">Unleashing the Power of Unikernels with Unikraft</a></h2>
+<p class="author">Simon Kuenzer, Sharan Santhanam, Yuri Volchkov, Florian Schmidt, Felipe Huici <em>NEC Laboratories Europe GmbH</em>; <b>Joel Nider</b>, Mike Rapoport <em>IBM Research - Haifa</em>; Costin Lupu <em>University Politehnica of Bucharest</em></p>
+<p class="abstract">
+Recent research has shown that unikernels, lightweight virtual machines tailored to specific applications, have great potential in terms of performance, tiny boot times, small memory consumption, and a reduced trusted compute base. Creating and optimizing them, however, is currently a painful, time-consuming process that often needs redoing for every application. With Unikraft, we introduce a system for automatically building unikernels that drastically reduces this time without negatively impacting performance.
+</p>
+
+<h2 class="node-title">Systor 2017 - <a href="https://doi.org/10.1145/3078468.3078490">User space memory management for post-copy migration</a></h2>
+<p class="author">Authors Mike Rapoport, <b>Joel Nider</b>, <em>IBM Research - Haifa</em></p>
+<p class="abstract">
+Post-copy migration allows reduction of application down-time and reduces overall network bandwidth used for application migration. Migration can be used to help optimize several aspects of operations such as power efficiency. The userfault technology recently introduced to the Linux kernel allows post-copy migration of virtual machines. However, this technology is missing essential features required for post-copy migration of Linux containers.
+</p>
+<a href="posters/systor17-uffd-poster-v4.png"><img src="posters/systor17-uffd-poster-v4-thumb.png" /></a>
+
+<h2 class="node-title">Systor 2016 - <a href="https://dl.acm.org/doi/abs/10.1145/2928275.2933275">Cross ISA Container Migration</a></h2>
+<div class="node-content">
+<p><b>Joel Nider</b>, Mike Rapoport <em>IBM Research - Haifa</em></p>
+</div class="node-content">
+<p class="abstract">
+Containers are a convenient way of encapsulating and isolating applications. They incur less overhead than virtual machines and provide more flexibility and versatility to improve server utilization. Many new cloud applications are being written in the microservices style to take advantage of container technologies. Each component of the application can be encapsulated in a separate container, which enables the use of other features such as auto-scaling. However, legacy applications can also benefit from containers which provide more efficient development and deployment models.
+</p>
+<a href="posters/systor16-opera-poster.png"><img src="posters/systor16-opera-poster-thumb.png" /></a>
+
+<h2 class="node-title">OpenPOWER Summit Europe 2016 - Container Migration In A Heterogeneous Datacenter</h2>
+<div class="node-content">
+<p><b>Joel Nider</b>, Mike Rapoport <em>IBM Research - Haifa</em>; Gallig Renaud <em>HPE</em>; Craig Petrie <em> Nallatech</em>; Ashish Venkat <em>UCSD</em></p>
+</div class="node-content">
+<a href="posters/2016-openpower-summit-europe.png"><img src="posters/2016-openpower-summit-europe-thumb.png" /></a>
+
+  <h2 class="node-title">
+	Systor 2013 - vRIO: Virtual Remote I/O
+</h2>
+  <div class="node-content">
+    <p>Yossi Kuperman, Muli Ben-Yehuda, Dan Tsafrir <em>Technion IIT</em> Abel Gordon, <b>Joel Nider</b>, Razya Ladelsky, Eran Raichstein <em>IBM Research - Haifa</em></p>
+    <p id="award">Best Poster</p>
+	 <a href="posters/2013-systor_poster.png"><img src="posters/2013-systor_poster-thumb.png" /></a>
+  </div>
+
+</div id="content">
+</div id="wrapper">
+</body>
+</html>

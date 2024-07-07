@@ -10,11 +10,9 @@
 <h1 class="section">Publications</h1>
 <ul id="nav">
 <li class="inactive"><a href=index.html>Main</a></li>
-<li class="inactive"><a href="research.html">Research</a></li>
 <li class="inactive"><a href="posters.html">Posters</a></li>
 <li><a href="papers.html">Papers</a></li>
-<!-- <li class="inactive"><a href="patents.html">Patents</a></li> -->
-<!-- <li class="inactive"><a href="patches.html">Patches</a></li> -->
+<li class="inactive"><a href="patches.html">Patches</a></li>
 <li class="inactive"><a href="presentations.html">Presentations</a></li>
 </ul>
 
@@ -28,7 +26,33 @@ For the complete list, check out <a href="https://scholar.google.com/citations?h
   <tr><td><td><div class="authors"><b>Joel Nider</b> and Alexandra Fedorova, <em>University of British Columbia</em></div></tr>
   <tr><td><td><p class="award">More details soon!</p></tr>
 -->
-  <tr><td><div class="conf">USENIX ATC '21</div><td><div class="title">A Case Study of Computing-in-Memory in off-the-Shelf Systems</div></tr>
+  <tr><td><div class="conf">SYSTOR '22</div><td><div class="title"><a href="https://people.ece.ubc.ca/~sasha/papers/systor22-final113.pdf">Bulk JPEG Decoding on In-Memory Processors</a></div></td></tr>
+  <tr><td><td><div class="authors">
+	<b>Joel Nider</b>,
+	Jackson Dagger,
+	Niloo Gharavi,
+	Daniel Ng,
+	and Alexandra Fedorova <em>(University of British Columbia)</em>
+	</div></td></tr>
+<tr><td><td><p class="abstract">
+JPEG is a common encoding format for digital images.
+Applications that process large numbers of images can be
+accelerated by decoding multiple images concurrently. We examine
+the suitability of using a large array of in-memory processors
+(PIM) to obtain a high throughput of decoding. The main
+drawback of PIM processors is that they do not have the same
+architectural features that are commonly found on CPUs
+such as floating point, vector units and hardware-managed
+caches. Despite the lack of features, we demonstrate that it
+is feasible to build a JPEG decoder for PIM, and evaluate its
+quality and potential speedup. We show that the quality of
+decoded images is sufficient for real applications, and there
+is a significant potential for accelerating image decoding
+for those applications. We share our experiences in building
+such a decoder, and the challenges we faced while doing so.
+</p></tr>
+
+  <tr><td><div class="conf">USENIX ATC '21</div><td><div class="title"><a href="https://www.usenix.org/conference/atc21/presentation/nider">A Case Study of Processing-in-Memory in off-the-Shelf Systems</a></div></tr>
   <tr><td><td><div class="authors">
 		<b>Joel Nider</b>,
 	Craig Mustard,
@@ -36,15 +60,18 @@ For the complete list, check out <a href="https://scholar.google.com/citations?h
 	John Ramsden,
 	Larry Liu,
 	Jacob Grossbard,
-	Mohammad Dashti,
-	Alexandra Fedorova <em>(University Of British Columbia)</em>,
+	Mohammad Dashti <em>(University Of British Columbia)</em>,
 	Romaric Jodin,
-	Alexandre Ghiti
-	and Jordi Chauzi <em>(UPMEM SAS)</em>
+	Alexandre Ghiti,
+	Jordi Chauzi <em>(UPMEM SAS)</em>,
+	and Alexandra Fedorova <em>(University Of British Columbia)</em>
   </div></tr>
-  <tr><td><td><p class="award">More details soon!</p></tr>
+<tr><td><td><p class="abstract">
+We evaluate a new processing-in-memory (PIM) architecture from UPMEM that was built and deployed in an off-
+the-shelf server. Systems designed to perform computing in or near memory have been proposed for decades to overcome the proverbial memory wall, yet most never made it past blueprints or simulations. When the hardware is actually built and integrated into a fully functioning system, it must address realistic constraints that may be overlooked in a simulation. Evaluating a real implementation can reveal valuable insights. Our experiments on five commonly used applications highlight the main strength of this architecture: computing capability and the internal memory bandwidth scale with memory size. This property helps some applications defy the von-Neumann bottleneck, while for others, architectural limitations stand in the way of reaching the hardware potential. Our analysis explains why.
+</p></tr>
 
-  <tr><td><div class="conf">SYSTOR '21</div><td><div class="title">Jumpgate: Network Connected Acceleration for Data Analytics</div></tr>
+  <tr><td><div class="conf">SYSTOR '21</div><td><div class="title"><a href="https://people.ece.ubc.ca/sasha/papers/systor21-jumpgate-preprint.pdf">Jumpgate: Network Connected Acceleration for Data Analytics</a></div></tr>
   <tr><td><td><div class="authors">
 	Craig Mustard <em>(University of British Columbia and Oracle Labs)</em>,
 	Swati Goswami,
@@ -53,14 +80,20 @@ For the complete list, check out <a href="https://scholar.google.com/citations?h
 	Ivan Beschastnikh
 	and Alexandra Fedorova <em>(University of British Columbia)</em>
   </div></tr>
-  <tr><td><td><p class="award">More details soon!</p></tr>
+<tr><td><td><p class="abstract">Network-connected accelerators (NCA), such programmable
+switches, ASICs, and FPGAs can speed up operations in data analytics manyfold. But so far, integration of NCAs into data analytics systems required manual effort: orchestrating their execution over the network and converting data to and from formats understood by NCAs. Clearly, this manual approach is neither scalable nor sustainable.
+We present JumpGate, a system that simplifies integration of existing NCA code into data analytics systems, such as Apache Spark or Presto. JumpGate places most of the integration code into the analytics system, which needs to be written once, leaving NCA programmers to write only a couple hundred lines of code to integrate of new NCAs.
+JumpGate relies on dataflow graphs that most analytics systems internally use for query processing, and takes care of the invocation of NCAs, the necessary format conversion, and orchestration of their execution via novel staged network pipelines.</p> <p class="abstract">Our implementation of JumpGate in Apache Spark made it possible, for the first time, to study the benefits and drawbacks of using NCAs across the entire range of queries in the TPC-DS benchmark. Since we lack hardware that can accelerate all analytics operations, we implemented NCAs in software. We report insights on how and when analytics workloads will benefit from NCAs to motivate future
+designs.</p></tr>
 
-  <tr><td><div class="conf">HotOS '21</div><td><div class="title">The Last CPU</div></td>
+  <tr><td><div class="conf">HotOS '21</div><td><div class="title"><a href="https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-nider.pdf">The Last CPU</a></div></td>
   <tr><td><td><div class="authors">
 	<b>Joel Nider</b>
 	and Alexandra Fedorova <em>(University of British Columbia)</em>
-	</div></td>
-  <tr><td><td><p class="award">More details soon!</p></tr>
+	</div></tr>
+<!--  <tr><td><td><p class="award">To be presented @ 08:00 PDT June 1, 2021</p></tr> -->
+<tr><td><td><p class="abstract">Since the end of Dennard scaling and Moore&#39;s Law have been foreseen, specialized hardware has become the focus for continued scaling of application performance. Programmable accelerators such as smart memory, smart disks, and smartNICs are now being integrated into our systems. Many accelerators can be programmed to process their data autonomously and require little or no intervention during normal operation. In this way, entire applications are offloaded, leaving the CPU with the minimal responsibilities of initialization, coordination and error handling.
+We claim that these responsibilities can also be handled in simple hardware other than the CPU and that it is wasteful to use a CPU for these purposes. We explore the role and the structure of the OS in a system that has no CPU and demonstrate that all necessary functionality can be moved to other hardware. We show that almost all of the pieces for such a system design are already available today. The responsibilities of the operating system must be split between self-managing devices and a system bus that handles privileged operations.</p></tr>
 
   <tr><td><div class="conf">USENIX ;Login: Magazine</div>
 	<td><div class="title"><a href="https://www.usenix.org/publications/loginonline/processing-persistent-data-place">Processing Persistent Data in Place</a></div></tr>
@@ -70,7 +103,7 @@ For the complete list, check out <a href="https://scholar.google.com/citations?h
 	Andrada Zoltan
 	and Alexandra Fedorova <em>(University of British Columbia)</em>
 	</div></tr>
-  <tr><td><td><p class="abstract">Optane™ storage-class memory and new Processing-in-Memory (PIM) hardware is on the verge of becoming a commercial product. We believe that combining PIM with SCM, that is, Processing in Storage Class Memory, is the right way to tap into the potential of modern storage. But first, a little history to help make the problems obvious.</p></tr>
+  <tr><td><td><p class="abstract">Optane&trade; storage-class memory and new Processing-in-Memory (PIM) hardware is on the verge of becoming a commercial product. We believe that combining PIM with SCM, that is, Processing in Storage Class Memory, is the right way to tap into the potential of modern storage. But first, a little history to help make the problems obvious.</p></tr>
 
 
   <tr><td><div class="conf">HotStorage '20</div>

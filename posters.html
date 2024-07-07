@@ -10,11 +10,10 @@
 <h1 class="section">Posters</h1>
 <ul id="nav">
 <li class="inactive"><a href=index.html>Main</a></li>
-<li class="inactive"><a href="research.html">Research</a></li>
 <li><a href="posters.html">Posters</a></li>
 <li class="inactive"><a href="papers.html">Papers</a></li>
 <!-- <li class="inactive"><a href="patents.html">Patents</a></li> -->
-<!-- <li class="inactive"><a href="patches.html">Patches</a></li> -->
+<li class="inactive"><a href="patches.html">Patches</a></li>
 <li class="inactive"><a href="presentations.html">Presentations</a></li>
 </ul>
 
@@ -39,6 +38,20 @@ Monolithic kernel design mandates the use of a single address space for kernel d
 <p class="abstract">
 Recent research has shown that unikernels, lightweight virtual machines tailored to specific applications, have great potential in terms of performance, tiny boot times, small memory consumption, and a reduced trusted compute base. Creating and optimizing them, however, is currently a painful, time-consuming process that often needs redoing for every application. With Unikraft, we introduce a system for automatically building unikernels that drastically reduces this time without negatively impacting performance.
 </p>
+
+<h2 class="node-title">Systor 2017 - <a href="http://www.operaproject.eu/wp-content/uploads/2017/07/a20-nider.pdf">Remote Page Faults with a CAPI-based FPGA</a></h2>
+<p class="author">Authors <b>Joel Nider</b>, Yiftach Binyamini and Mike Rapoport<em>IBM Research - Haifa</em></p>
+<p class="abstract">
+Post-copy VM or container migration requires that the bulk of the memory is transferred after resuming on the
+destination node. Transferring memory between nodes over a commodity TCP/IP network incurs too much latency,
+which slows down execution of the application on the destination node.
+Effective post-copy migration depends on a high-speed, low-latency interconnect to move memory pages efficiently between servers.
+We are building a prototype of a special purpose interconnect that will reduce the latency when transferring memory
+from a remote machine.
+For simplicity, the initial prototype involves only two machines connected with FPGA equipped CAPI expansion cards
+(Nallatech 385A-SoC).
+</p>
+
 
 <h2 class="node-title">Systor 2017 - <a href="https://doi.org/10.1145/3078468.3078490">User space memory management for post-copy migration</a></h2>
 <p class="author">Authors Mike Rapoport, <b>Joel Nider</b>, <em>IBM Research - Haifa</em></p>
